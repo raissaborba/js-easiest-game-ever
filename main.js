@@ -4,8 +4,8 @@ const game = document.getElementById('game');
 
 window.addEventListener('keydown', jump);
 
-function jump() {
-    if(character.classList != 'animate'){
+function jump(e) {
+    if(e.keyCode === 32 && character.classList != 'animate'){
         character.classList.add('animate')
     }
     setTimeout(() => {
